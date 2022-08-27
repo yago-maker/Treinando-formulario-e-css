@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kira</title>
+
+<style>
+   body {
+          font-family: 'Times New Roman', Times, serif;
+          background-image: linear-gradient(to right, rgb(117, 7, 7), rgb(155, 167, 52));  
+   }
+
+   .box {
+color: white;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: rgba(59, 42, 42, 0.5);
+padding: 20px;
+border-radius: 20px;
+width: 20%;
+
+   }
+
+fieldset {
+border: 3px solid white;
+}
+
+legend {
+border: 1px solid rgb(151, 134, 114);
+padding: 15px;
+text-align: center;
+background-color: rgb(177, 174, 139);
+border-end-end-radius: 15px;
+}
+
+.inputBox {
+position: relative;
+
+}
+
+.inputUser {
+background: none;
+border: none;
+border-bottom: 1px solid rgb(233, 217, 2);
+outline: none;
+color: rgb(207, 207, 171);
+font-size: 15px;
+width: 100%;
+letter-spacing: 2px;
+}  
+
+.labelinput {
+         position: absolute;
+         top: 0px;
+         left: 0px;
+         pointer-events: none;
+         transition: -5s;
+}
+
+.inputUser:focus ~ .labelinput,
+.inputUser:valid ~ .labelinput{
+  top: -20px;
+  font-size: 12px;
+  color: rgb(216, 162, 14);
+}
+
+#data_nascimento {
+border: none;
+padding: 8px;
+border-radius: 10px;
+outline: none;
+font-size: 15px;
+
+}
+
+#submit {
+    background-image: linear-gradient(to right, rgb(0, 92, 20, 220));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: rgb(19, 19, 17);
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#submit:hover {
+
+    background-image: linear-gradient(to right, rgb(rgb(216, 112, 27)));
+}
+
+#submit {
+font-size: large;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+line-height: 15px;
+text-align: center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+    <div class="box">
+       <form action="">
+         <fieldset>
+            <legend> <b><strong>Fórmulário de Clientes</strong></b>
+            </legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" class="inputUser" required>
+                    <label for="nome" class="labelinput"><strong>Nome Completo</strong></label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="Email" class="inputUser" required>
+                    <label for="nome" class="labelinput" ><strong>Email</strong> </label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelinput" ><strong> Telefone</strong></label>
+                </div>
+                <br>
+                <br>
+                <br><br>
+                <p>Sexo:</p>
+                <input type="radio" name="radio" value="feminino" required>
+                <label for="feminino"> <strong>Feminino</strong> </label>
+
+                <input type="radio" name="radio" value="feminino" required>
+                <label for="Masculino"> <strong>Masculino</strong></label>
+
+                <input type="radio" name="radio" value="feminino" required>
+                <label for="outro"><strong>Outro</strong> </label>
+<br>
+
+                <div class="inputBox">
+                    <input type="date" name="data_nascimento" id="data_nascimento" required>
+                    <label for="data_nascimento"><b>Data de Nascimento</b></label>
+                </div>
+<br>
+                <div class="inputBox">
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                    <label for="cidade"  class="labelinput" ><b>Cidades</b></label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="estado" id="estado" class="inputUser" required>
+                    <label for="estado"  class="labelinput" ><b>Estado</b></label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="endereço" class="inputUser" required>
+                    <label for="endereço" class="labelinput" ><b>Endereço</b></label>
+                </div>
+                <br>
+
+    <div id="area">
+
+        <input  type="submit" name="submit" id="submit">
+
+    </div>
+          
+         </fieldset>
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+
+
+a.addEventListener('click', clicar)
+
+
+
+function clicar() {
+a.innerText = 'Dados enviado!'
+a.style.background = 'orange'
+}
+
+    </script>
+</body>
+</html>
